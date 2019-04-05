@@ -1,0 +1,32 @@
+﻿<Window x:Class="ApiCreate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApiCreate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="URL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="87,9,0,0"/>
+        <Label Content="API" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="87,63,0,0"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Margin="153,15,0,0"/>
+        
+        <ListView Name="listview2" Margin="153,65,0,0">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Title :"/>
+                        <TextBlock Text="{Binding Title}"/>
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Body :"/>
+                        <TextBlock Text="{Binding Body}"/>
+                        <TextBlock Text=", " />
+                    </WrapPanel>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+        </ListView>
+       
+        <Button Content="Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="498,15,0,0" Click="Button_Click"/>
+
+    </Grid>
+</Window>
